@@ -1,10 +1,10 @@
 {
-  "uploadOnSave": false,
+  "uploadOnSave": true,
   "useAtomicWrites": false,
   "deleteLocal": false,
   "hostname": "max-heidinger.de",
   "port": "22",
-  "target": "/home/admin/Website",
+  "target": "/home/admin/max-heidinger.de",
   "ignore": [
     ".remote-sync.json",
     ".git/**"
