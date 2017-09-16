@@ -1,0 +1,18 @@
+{
+  "uploadOnSave": false,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "max-heidinger.de",
+  "port": "22",
+  "target": "/home/admin/Website",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "root",
+  "password": "#Terika123",
+  "watch": [
+    "/"
+  ],
+  "transport": "scp"
+}
