@@ -8,18 +8,44 @@
     <link rel="stylesheet" href="style/cssreset.css">
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/start_container.css">
+    <link rel="stylesheet" href="style/full_site_container.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/transition.min.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
 
     <div id="start_container">
       <img src="images/profile.jpg" id="profile_img" />
-
       <h1>Max Heidinger</h1>
+
       <h2>Dual Student of Applied Computer Science</h2>
       <h2>Studying at DHBW Karlsruhe</h2>
       <h2>Working at SAP</h2>
 
-      <button>Learn more about me!</button>
+      <button id="learn_more_button">Learn more about me!</button>
+    </div>
+
+    <div id="full_site_container">
+      <div id="header">
+        <img src="images/profile.jpg" id="profile_img" />
+        <h1>Max Heidinger</h1>
+      </div>
+      <div id="content_divider"></div>
+      <div id="column_div">
+        <div class="column"><p>School</p></div>
+        <div class="column"><p>Programming Languages</p></div>
+        <div class="column"><p>Gitlab / Github</p></div>
+        <div class="column"><p>Mail</p></div>
+        <div class="column"><p>?</p></div>
+        <div class="column"><p>?</p></div>
+      </div>
+    </div>
+
+    <div id="common_footer">
+      <p>© <script type="text/javascript">document.write(new Date().getFullYear());</script> - Max Heidinger</p>
     </div>
 
   </body>

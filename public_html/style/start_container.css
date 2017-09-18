@@ -1,0 +1,32 @@
+#start_container {
+  text-align: center;
+  padding-top: 20vh;
+  height: 100%;
+}
+
+#start_container #profile_img {
+  width: 12%;
+  height: auto;
+  box-shadow: 10px 13px 170px 32px rgba(156,156,156,1);
+}
+
+#start_container h1 {
+  line-height: 150%;
+}
+
+#start_container h2 {
+  line-height: 120%;
+}
+
+#start_container button {
+  margin: 4vh;
+  padding: 10px 15px;
+  border: 2px solid #D85315;
+  color: #D85315;
+  background-color: Transparent;
+  cursor: pointer;
+  font-size: 120%;
+  font-family: 'Aldrich', sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
