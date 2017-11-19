@@ -1,41 +1,42 @@
-html, body {
-  height: 100%;
+html,
+body {
+	height: 100%;
 }
 
 body {
-  background-color: #414646;
-  font-family: 'Aldrich', sans-serif;
-  /*overflow: hidden;*/
+	background-color: #414646;
+	font-family: 'Aldrich', sans-serif;
+	/*overflow: hidden;*/
 }
 
 h1 {
-  font-size: 320%;
+	font-size: 320%;
 }
 
 h2 {
-  font-size: 220%;
+	font-size: 220%;
 }
 
 p {
-  font-size: 110%;
+	font-size: 110%;
 }
 
 #profile_img {
-  border: 3px solid #9c9c9c;
+	border: 3px solid #9c9c9c;
 }
 
 #common_footer {
-  position: absolute;
-  bottom: 0;
-  margin: 10px;
-  color: #292929;
+	position: absolute;
+	bottom: 0;
+	margin: 10px;
+	color: #292929;
 }
 
 .transition {
-  transform: scale(1);
-  transition: transform 0.2s ease-in-out;
+	transform: scale(1);
+	transition: transform 0.2s ease-in-out;
 }
 
 .hidden {
-  transform: scale(0);
+	transform: scale(0);
 }

@@ -1,46 +1,46 @@
 #full_site_container {
-  display: none;
-  height: 100%;
-  flex-direction: column;
+	display: none;
+	height: 100%;
+	flex-direction: column;
 }
 
 #full_site_container #header {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #full_site_container #header #profile_img {
-  width: 5%;
-  height: auto;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 20px;
+	width: 5%;
+	height: auto;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 20px;
 }
 
 #full_site_container #header h1 {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 400%;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 400%;
 }
 
 #full_site_container #content_divider {
-  width: 100%;
-  height: 1vh;
-  background-color: #D85315;
-  position: relative;
+	width: 100%;
+	height: 1vh;
+	background-color: #D85315;
+	position: relative;
 }
 
 #full_site_container #column_div {
-  display: flex;
-  flex: 1 1 auto;
-  height: 100%;
+	display: flex;
+	flex: 1 1 auto;
+	height: 100%;
 }
 
 #full_site_container .column {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  display: inline-block;
-  width: calc(100% / 4);
-  height: 100%;
-  border: 2px solid white;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	display: inline-block;
+	width: calc(100% / 4);
+	height: 100%;
+	border: 2px solid white;
 }
