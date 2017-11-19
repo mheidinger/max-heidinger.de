@@ -40,7 +40,7 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   display: inline-block;
-  width: calc(100% / 6);
+  width: calc(100% / 4);
   height: 100%;
   border: 2px solid white;
 }
