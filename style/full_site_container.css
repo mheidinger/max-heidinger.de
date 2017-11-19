@@ -1,6 +1,7 @@
 #full_site_container {
   display: none;
   height: 100%;
+  flex-direction: column;
 }
 
 #full_site_container #header {
@@ -29,7 +30,8 @@
 }
 
 #full_site_container #column_div {
-  font-size: 0;
+  display: flex;
+  flex: 1 1 auto;
   height: 100%;
 }
 
