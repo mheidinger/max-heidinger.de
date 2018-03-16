@@ -14,7 +14,7 @@ pipeline:
 
   rancher-deploy:
     image: peloton/drone-rancher
-    url: https://max-heidinger.de:8089
+    url: http://max-heidinger.de:8089
     secrets: [ rancher_access_key, rancher_secret_key ]
     service: websites/max-heidinger
     docker_image: registry.max-heidinger.de/max-heidinger.de
