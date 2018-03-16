@@ -6,6 +6,8 @@ pipeline:
       - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD registry.max-heidinger.de
       - docker build -t registry.max-heidinger.de/max-heidinger.de:latest .
       - docker push registry.max-heidinger.de/max-heidinger.de:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     when:
       branch: master
       event: push
