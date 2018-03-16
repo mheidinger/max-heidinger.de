@@ -28,6 +28,8 @@ pipeline:
     secrets: [ rancher_access_key, rancher_secret_key ]
     service: websites/max-heidinger
     docker_image: registry.max-heidinger.de/max-heidinger.de
+    confirm: true
+    timeout: 15
     when:
       branch: master
       event: push
