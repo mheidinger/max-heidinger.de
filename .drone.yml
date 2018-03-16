@@ -1,0 +1,16 @@
+pipeline:
+	publish-docker:
+		image: plugins/docker
+		repo: registry.max-heidinger.de/max-heidinger.de
+		registry: registry.max-heidinger.de
+		tags: latest
+		when:
+			branch: master
+
+	rancher-deploy:
+		image: peloton/drone-rancher
+		url: https://max-heidinger.de:8089
+		access_key: $$RANCHER_ACCESS_KEY
+		secret_key: $$RANCHER_SECRET_KEY
+		service: websites/max-heidinger
+		docker_image: registry.max-heidinger.de/max-heidinger.de
