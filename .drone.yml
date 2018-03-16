@@ -3,6 +3,8 @@ pipeline:
     image: plugins/docker
     repo: registry.max-heidinger.de/max-heidinger.de
     registry: registry.max-heidinger.de
+    username: $$REGISTRY_USERNAME
+    password: $$REGISTRY_PASSWORD
     tags: latest
     when:
       branch: master
