@@ -44,6 +44,7 @@
 	height: 100%;
 	border-left: 1px solid #D85315;
 	border-right: 1px solid #D85315;
+	border-bottom: 2px solid #D85315;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -54,6 +55,7 @@
 #full_site_container .column-header {
 	margin: 20px 0px 20px 0px;
 	flex-grow: 1;
+	text-decoration: underline;
 }
 
 #full_site_container .column-content {
@@ -67,4 +69,14 @@
 
 #full_site_container .column-content h4 {
 	margin-top: 15px;
+}
+
+#full_site_container .column-content a {
+	color: black;
+	text-decoration: none;
+}
+
+#full_site_container .column-content a:hover {
+	-webkit-filter: drop-shadow(0px 0px 30px rgba(156, 156, 156, 1));
+  filter: drop-shadow(0px 0px 50px rgba(156, 156, 156, 1));
 }
