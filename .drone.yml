@@ -27,7 +27,7 @@ pipeline:
     url: http://max-heidinger.de:8089
     secrets: [ rancher_access_key, rancher_secret_key ]
     service: websites/max-heidinger
-    docker_image: registry.max-heidinger.de/max-heidinger.de
+    docker_image: registry.max-heidinger.de/max-heidinger.de:latest
     confirm: true
     timeout: 15
     when:
