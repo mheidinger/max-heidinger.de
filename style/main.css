@@ -33,10 +33,21 @@ p {
 }
 
 #common_footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
-	margin: 10px;
+	width: 100%;
 	color: #292929;
+	clear: both;
+}
+
+#footer_left {
+	float: left;
+	margin: 10px;
+}
+
+#footer_right {
+	float: right;
+	margin: 10px;
 }
 
 .transition {
