@@ -6,6 +6,23 @@ $(document).ready(function() {
 	$("#full_site_container #header").click(function() {
 		doTransition("#full_site_container", "#start_container");
 	});
+
+	let modal = $(".modal");
+	$("#data_privacy_link").click(function() {
+		modal.css("display", "block");
+	});
+
+	$(window).click(function(ev) {
+		if (ev.target.className == "modal") {
+			modal.css("display", "none");
+		}
+	});
+
+	$(document).keyup(function(ev) {
+		if (ev.keyCode === 27) {
+			modal.css("display", "none");
+		}
+	});
 });
 
 function doTransition(from, to) {
