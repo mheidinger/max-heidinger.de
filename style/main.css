@@ -4,7 +4,7 @@ body {
 }
 
 body {
-	background-color: #798080;
+	background-color: #939a9a;
 	font-family: 'Aldrich', sans-serif;
 	line-height: 2rem;
 }
@@ -49,7 +49,7 @@ ol {
 }
 
 #profile_img {
-	border: 3px solid #9c9c9c;
+	border: 5px solid #585553;
 }
 
 #common_footer {
@@ -93,7 +93,7 @@ ol {
 .modal_content {
 	background-color: #fefefe;
 	margin: 4% auto;
-	padding: 20px;
+	padding: 30px;
 	border: 1px solid #888;
 	width: 80%;
 	height: 80%;

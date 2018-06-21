@@ -13,7 +13,7 @@
 #start_container_content #profile_img {
 	width: 12%;
 	height: auto;
-	box-shadow: 10px 13px 170px 32px rgba(156, 156, 156, 1);
+	box-shadow: 10px 13px 170px 32px rgba(255, 255, 255, 0.1);
 }
 
 #start_container_content h1 {
