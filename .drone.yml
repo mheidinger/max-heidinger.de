@@ -1,7 +1,7 @@
 pipeline:
-  rebuild-cache:
+  restore-cache:
     image: drillster/drone-volume-cache
-    rebuild: true
+    restore: true
     mount:
       - ./node_modules
     volumes:
@@ -50,9 +50,9 @@ pipeline:
       branch: master
       event: push
 
-  restore-cache:
+  rebuild-cache:
     image: drillster/drone-volume-cache
-    restore: true
+    rebuild: true
     mount:
       - ./node_modules
     volumes:
