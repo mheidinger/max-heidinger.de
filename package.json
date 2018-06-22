@@ -9,7 +9,7 @@
     "sass:build": "node-sass-chokidar ./scss -o ./css",
     "sass:watch": "node-sass-chokidar ./scss -o ./css --watch",
     "server:serve": "browser-sync start --server --port 3000 --files 'css/*.css' './*.html'",
-    "build": "run-p run sass:build",
+    "build": "run-p sass:build",
     "dev": "run-p sass:watch server:serve"
   },
   "devDependencies": {
