@@ -1,101 +1,375 @@
 html,
-body {
-	height: 100%;
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
-	background-color: #939a9a;
-	font-family: 'Aldrich', sans-serif;
-	line-height: 2rem;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #939a9a;
+  font-family: "Aldrich", sans-serif;
+  line-height: 2rem;
 }
 
 h1 {
-	font-size: 320%;
-	margin: 10px 0;
+  font-size: 320%;
+  margin: 10px 0;
 }
 
 h2 {
-	font-size: 220%;
-	margin: 10px 0;
+  font-size: 220%;
+  margin: 10px 0;
 }
 
 h3 {
-	font-size: 180%;
-	margin: 10px 0;
+  font-size: 180%;
+  margin: 10px 0;
 }
 
 h4 {
-	font-size: 150%;
-	margin: 10px 0;
+  font-size: 160%;
+  margin: 10px 0;
 }
 
 h5 {
-	font-size: 130%;
-	margin: 10px 0;
+  font-size: 140%;
+  margin: 10px 0;
+}
+
+h6 {
+  font-size: 120%;
+  margin: 10px 0;
 }
 
 p {
-	font-size: 110%;
+  font-size: 110%;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {
-	list-style: inside;
-	margin-left: 10px;
+  list-style: inside;
+  margin-left: 10px;
 }
 
 ol {
-	list-style: decimal;
-	margin-left: 20px;
+  list-style: decimal;
+  margin-left: 20px;
 }
 
 #profile_img {
-	border: 5px solid #585553;
+  border: 5px solid #585553;
 }
 
 #common_footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	color: #292929;
-	clear: both;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #292929;
+  clear: both;
 }
 
 #footer_left {
-	float: left;
-	margin: 10px;
+  float: left;
+  margin: 10px;
 }
 
 #footer_right {
-	float: right;
-	margin: 10px;
+  float: right;
+  margin: 10px;
 }
 
 .transition {
-	transform: scale(1);
-	transition: transform 0.2s ease-in-out;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
 }
 
 .hidden {
-	transform: scale(0);
+  transform: scale(0);
 }
 
 .modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.2);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal_content {
-	background-color: #fefefe;
-	margin: 4% auto;
-	padding: 30px;
-	border: 1px solid #888;
-	width: 80%;
-	height: 80%;
-	overflow: auto;
+  background-color: #fefefe;
+  margin: 4% auto;
+  padding: 30px;
+  border: 1px solid grey;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+}
+
+#full_site_container {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+}
+
+#full_site_container #header {
+  cursor: pointer;
+}
+
+#full_site_container #header #profile_img {
+  width: 5%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 20px;
+}
+
+#full_site_container #header h1 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 300%;
+}
+
+#full_site_container #content_divider {
+  width: 100%;
+  height: 1vh;
+  background-color: #D85315;
+  position: relative;
+}
+
+#full_site_container #column_div {
+  display: flex;
+  height: 100%;
+}
+
+#full_site_container .column {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: inline-block;
+  width: calc(100% / 4);
+  border-left: 1px solid #D85315;
+  border-right: 1px solid #D85315;
+  border-bottom: 2px solid #D85315;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#full_site_container .column-header {
+  margin: 20px 0px 20px 0px;
+  flex-grow: 1;
+  text-decoration: underline;
+}
+
+#full_site_container .column-content {
+  flex-grow: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+#full_site_container .column-content h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#full_site_container .column-content a {
+  color: black;
+}
+
+#full_site_container .column-content a:hover {
+  -webkit-filter: drop-shadow(0px 0px 30px #9c9c9c);
+  filter: drop-shadow(0px 0px 50px #9c9c9c);
+}
+
+@media all and (max-width: 768px) {
+  #full_site_container {
+    height: auto;
+  }
+  #full_site_container #column_div {
+    height: auto;
+  }
+  #full_site_container .column {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+  #full_site_container #column_div {
+    flex-direction: column;
+  }
+}
+
+#start_container {
+  display: flex;
+  flex-direction: column;
+}
+
+#start_container #start_container_content {
+  text-align: center;
+  padding-top: 20vh;
+  height: 100%;
+  flex: 1 1 auto;
+}
+
+#start_container #start_container_content #profile_img {
+  width: 12%;
+  height: auto;
+  box-shadow: 10px 13px 170px 32px rgba(255, 255, 255, 0.3);
+}
+
+#start_container #start_container_content h1 {
+  line-height: 150%;
+}
+
+#start_container #start_container_content h2 {
+  line-height: 120%;
+}
+
+#start_container #start_container_content button {
+  margin: 4vh;
+  padding: 10px 15px;
+  border: 2px solid #D85315;
+  color: #D85315;
+  background-color: Transparent;
+  cursor: pointer;
+  font-size: 120%;
+  font-family: 'Aldrich', sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }

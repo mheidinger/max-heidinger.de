@@ -1,0 +1,97 @@
+@import 'reset';
+
+$background-color: #939a9a;
+$highlight-color: #D85315;
+$font: 'Aldrich', sans-serif;
+$mobile-width: 768px;
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: $background-color;
+	font-family: $font;
+	line-height: 2rem;
+}
+
+$font-sizes: (h1: 320%, h2: 220%, h3: 180%, h4: 160%, h5: 140%, h6: 120%);
+@each $elem, $size in $font-sizes {
+	#{$elem} {
+		font-size: #{$size};
+		margin: 10px 0;
+	}
+}
+
+p {
+	font-size: 110%;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: inside;
+	margin-left: 10px;
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 20px;
+}
+
+#profile_img {
+	border: 5px solid #585553;
+}
+
+#common_footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: #292929;
+	clear: both;
+}
+
+#footer_left {
+	float: left;
+	margin: 10px;
+}
+
+#footer_right {
+	float: right;
+	margin: 10px;
+}
+
+.transition {
+	transform: scale(1);
+	transition: transform 0.2s ease-in-out;
+}
+
+.hidden {
+	transform: scale(0);
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.modal_content {
+	background-color: #fefefe;
+	margin: 4% auto;
+	padding: 30px;
+	border: 1px solid grey;
+	width: 80%;
+	height: 80%;
+	overflow: auto;
+}
+
+@import 'full_site_container';
+@import 'start_container';
