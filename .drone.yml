@@ -1,4 +1,20 @@
 pipeline:
+  rebuild-cache:
+    image: drillster/drone-volume-cache
+    rebuild: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/websiteCache:/cache
+  
+  build-site:
+    image: node:9-slim
+    environment:
+      - NODE_ENV=production
+    commands:
+      - yarn
+      - yarn build
+
   publish-docker:
     image: docker
     secrets: [ docker_username, docker_password ]
@@ -33,3 +49,11 @@ pipeline:
     when:
       branch: master
       event: push
+
+  restore-cache:
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/websiteCache:/cache
