@@ -1,0 +1,6 @@
+.drone.yml
+.gitignore
+.git/
+package.json
+README.md
+yarn.lock

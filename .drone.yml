@@ -9,8 +9,6 @@ pipeline:
   
   build-site:
     image: node:9-slim
-    environment:
-      - NODE_ENV=production
     commands:
       - yarn
       - yarn build
