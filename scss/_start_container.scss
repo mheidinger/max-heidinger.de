@@ -35,4 +35,13 @@
 			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 		}
 	}
+
+	@for $i from 1 through 6 {
+		#start_container_content.first_open *:nth-child(#{$i}) {
+			animation-name: fade-in;
+			animation-fill-mode: both;
+			animation-duration: 0.5s;
+			animation-delay: #{0.1 * $i}s;
+		}
+	}
 }

@@ -8,7 +8,7 @@
   "scripts": {
     "sass:build": "node-sass-chokidar --output-style=compressed ./scss -o ./css",
     "sass:watch": "node-sass-chokidar --output-style=expanded ./scss -o ./css --watch",
-    "server:serve": "browser-sync start --server --port 3000 --files 'css/*.css' --files './*.html'",
+    "server:serve": "browser-sync start --server --port 3000 --files 'css/*.css' --files './*.html' --files 'js/*.js'",
     "build": "run-p sass:build",
     "dev": "run-p sass:watch server:serve"
   },

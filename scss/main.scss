@@ -5,6 +5,11 @@ $highlight-color: #D85315;
 $font: 'Aldrich', sans-serif;
 $mobile-width: 768px;
 
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 html, body {
 	height: 100%;
 }
@@ -63,15 +68,6 @@ ol {
 	margin: 10px;
 }
 
-.transition {
-	transform: scale(1);
-	transition: transform 0.2s ease-in-out;
-}
-
-.hidden {
-	transform: scale(0);
-}
-
 .modal {
 	display: none;
 	position: fixed;
@@ -91,6 +87,7 @@ ol {
 	width: 80%;
 	height: 80%;
 	overflow: auto;
+	transition: all 3s ease-in-out;
 }
 
 @import 'full_site_container';
