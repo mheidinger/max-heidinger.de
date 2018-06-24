@@ -10,6 +10,12 @@ $mobile-width: 768px;
   100% { opacity: 1; }
 }
 
+@mixin filter($property) {
+  -webkit-filter: $property;
+					filter: $property;
+}
+
+
 html, body {
 	height: 100%;
 }
@@ -41,11 +47,6 @@ ul {
 	margin-left: 10px;
 }
 
-ol {
-	list-style: decimal;
-	margin-left: 20px;
-}
-
 #profile_img {
 	border: 5px solid #585553;
 }
@@ -58,14 +59,11 @@ ol {
 	clear: both;
 }
 
-#footer_left {
-	float: left;
-	margin: 10px;
-}
-
-#footer_right {
-	float: right;
-	margin: 10px;
+@each $side in (left, right) {
+	#footer_#{$side} {
+		float: #{$side};
+		margin: 2px 10px;
+	}
 }
 
 .modal {
@@ -87,7 +85,6 @@ ol {
 	width: 80%;
 	height: 80%;
 	overflow: auto;
-	transition: all 3s ease-in-out;
 }
 
 @import 'full_site_container';

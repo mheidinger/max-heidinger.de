@@ -189,11 +189,6 @@ ul {
   margin-left: 10px;
 }
 
-ol {
-  list-style: decimal;
-  margin-left: 20px;
-}
-
 #profile_img {
   border: 5px solid #585553;
 }
@@ -208,12 +203,12 @@ ol {
 
 #footer_left {
   float: left;
-  margin: 10px;
+  margin: 2px 10px;
 }
 
 #footer_right {
   float: right;
-  margin: 10px;
+  margin: 2px 10px;
 }
 
 .modal {
@@ -235,7 +230,6 @@ ol {
   width: 80%;
   height: 80%;
   overflow: auto;
-  transition: all 3s ease-in-out;
 }
 
 #full_site_container {
@@ -315,8 +309,8 @@ ol {
 }
 
 #full_site_container .column-content a:hover {
-  -webkit-filter: drop-shadow(0px 0px 30px #9c9c9c);
-  filter: drop-shadow(0px 0px 50px #9c9c9c);
+  -webkit-filter: drop-shadow(0px 0px 30px white);
+  filter: drop-shadow(0px 0px 30px white);
 }
 
 @media all and (max-width: 768px) {
@@ -325,14 +319,12 @@ ol {
   }
   #full_site_container #column_div {
     height: auto;
+    flex-direction: column;
   }
   #full_site_container .column {
     width: 100%;
     border-left: none;
     border-right: none;
-  }
-  #full_site_container #column_div {
-    flex-direction: column;
   }
 }
 
