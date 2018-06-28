@@ -2,7 +2,7 @@
   "name": "max-heidinger.de",
   "version": "1.0.0",
   "description": "Own personal website",
-  "repository": "git@github.com:TheHamloer/max-heidinger.de.git",
+  "repository": "git@github.com:mheidinger/max-heidinger.de.git",
   "author": "Max Heidinger <mail@max-heidinger.de>",
   "license": "MIT",
   "scripts": {
