@@ -14,36 +14,11 @@ pipeline:
       - yarn build
 
   publish-docker:
-    image: docker
+    image: plugins/docker
+    repo: registry.max-heidinger.de/max-heidinger.de
+    registry: registry.max-heidinger.de
     secrets: [ docker_username, docker_password ]
-    commands:
-      - docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD registry.max-heidinger.de
-      - docker build -t registry.max-heidinger.de/max-heidinger.de:latest .
-      - docker push registry.max-heidinger.de/max-heidinger.de:latest
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    when:
-      branch: master
-      event: push
-
-#  publish-docker:
-#    image: plugins/docker
-#    repo: registry.max-heidinger.de/max-heidinger.de
-#    registry: registry.max-heidinger.de
-#    secrets: [ docker_username, docker_password ]
-#    tags: latest
-#    when:
-#      branch: master
-#      event: push
-
-  rancher-deploy:
-    image: peloton/drone-rancher
-    url: http://max-heidinger.de:8089
-    secrets: [ rancher_access_key, rancher_secret_key ]
-    service: websites/max-heidinger
-    docker_image: registry.max-heidinger.de/max-heidinger.de:latest
-    confirm: true
-    timeout: 60
+    tags: latest
     when:
       branch: master
       event: push
