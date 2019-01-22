@@ -4,6 +4,7 @@ $small_media: 767px;
 $bg_backup_color: #182938;
 $border_color: #81869B;
 $profile_size: 23vw;
+$link_size: 6vw;
 $font: 'Montserrat', sans-serif;
 $font-color: #E1E5F0;
 
@@ -76,6 +77,18 @@ body {
 
     h1 {
       margin-bottom: 20px;
+    }
+  }
+
+  #content_links {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    img {
+      width: $link_size;
     }
   }
 }

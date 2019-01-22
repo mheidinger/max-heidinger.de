@@ -205,3 +205,15 @@ body {
 #content #content_text h1 {
   margin-bottom: 20px;
 }
+
+#content #content_links {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+#content #content_links img {
+  width: 6vw;
+}
