@@ -4,10 +4,25 @@ $small_media: 767px;
 $bg_backup_color: #182938;
 $border_color: #81869B;
 $profile_size: 23vw;
+$font: 'Montserrat', sans-serif;
+$font-color: #E1E5F0;
 
 html {
   width: 100%;
   height: 100%;
+  font-family: $font;
+  color: $font-color;
+}
+
+$font-sizes: (
+  h1: 700%,
+  h2: 250%,
+);
+@each $elem, $size in $font-sizes {
+  #{$elem} {
+    font-size: #{$size};
+    margin: 10px 0;
+  }
 }
 
 .webp body {
@@ -51,4 +66,16 @@ body {
   }
 
   margin: 5vw;
+}
+
+#content {
+  margin-left: 10vw;
+
+  #content_text {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
 }
