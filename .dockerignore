@@ -1,6 +1,8 @@
 .drone.yml
 .gitignore
 .git/
+.vscode/
+Dockerfile
+package-lock.json
 package.json
 README.md
-yarn.lock

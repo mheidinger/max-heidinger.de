@@ -10,18 +10,8 @@ pipeline:
   build-site:
     image: node:9-slim
     commands:
-      - yarn
-      - yarn build
-
-  publish-docker:
-    image: plugins/docker
-    repo: registry.max-heidinger.de/max-heidinger.de
-    registry: registry.max-heidinger.de
-    secrets: [ docker_username, docker_password ]
-    tags: latest
-    when:
-      branch: master
-      event: push
+      - npm install
+      - npm run build
 
   rebuild-cache:
     image: drillster/drone-volume-cache

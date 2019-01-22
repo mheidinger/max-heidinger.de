@@ -1,3 +1,3 @@
 Website for max-heidinger.de
 
-Install dependencies with `yarn` and run the server with `yarn dev`. Build with `yarn build`.
+Install dependencies with `npm install` and run the server with `npm run dev`. Build with `npm run build`.
