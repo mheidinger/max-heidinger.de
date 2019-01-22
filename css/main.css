@@ -127,7 +127,7 @@ table {
   border-spacing: 0;
 }
 
-html {
+html, body {
   width: 100%;
   height: 100%;
   font-family: "Montserrat", sans-serif;
@@ -170,21 +170,21 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-color: #182938;
+}
+
+#container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  justify-content: space-around;
   height: 100%;
+  padding: 0 5vw;
 }
 
 @media only screen and (max-width: 767px) {
-  body {
+  #container {
     flex-direction: column;
   }
-}
-
-#profile_pic {
-  margin: 5vw;
 }
 
 #profile_pic img {
@@ -192,10 +192,6 @@ body {
   border: 5px solid #81869B;
   width: 23vw;
   height: 23vw;
-}
-
-#content {
-  margin-left: 10vw;
 }
 
 #content #content_text {
