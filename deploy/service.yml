@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: max-heidinger
+  namespace: max
+spec:
+  selector:
+    app: max-heidinger
+  ports:
+  - name: http
+    port: 80
