@@ -1,22 +1,25 @@
-pipeline:
-  restore-cache:
-    image: drillster/drone-volume-cache
-    restore: true
-    mount:
-      - ./node_modules
-    volumes:
-      - /tmp/websiteCache:/cache
-  
-  build-site:
-    image: node:9-slim
-    commands:
-      - npm install
-      - npm run build
+kind: pipeline
+name: default
 
-  rebuild-cache:
-    image: drillster/drone-volume-cache
-    rebuild: true
-    mount:
-      - ./node_modules
-    volumes:
-      - /tmp/websiteCache:/cache
+steps:
+- name: build-site
+  image: node
+  commands:
+  - npm install
+  - npm run build
+
+- name: push-registry
+  image: plugins/docker
+  settings:
+    repo: registry.glidingthrough.space/max-heidinger.de
+    registry: registry.glidingthrough.space
+    tags:
+      - latest
+      - $DRONE_BUILD_NUMBER
+    username:
+      from_secret: registry_username
+    password:
+      from_secret: registry_password
+  when:
+    branch:
+    - master
