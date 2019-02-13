@@ -15,7 +15,7 @@ steps:
     registry: registry.glidingthrough.space
     tags:
       - latest
-      - ${DRONE_BUILD_NUMBER}
+      - ci-${DRONE_BUILD_NUMBER}
     username:
       from_secret: registry_username
     password:
@@ -23,3 +23,29 @@ steps:
   when:
     branch:
     - master
+    - develop
+    event:
+      exclude:
+      - pull_request
+
+- name: deploy-image
+  image: quay.io/riesinger/drone-kubernetes
+  settings:
+    kubernetes_server:
+      from_secret: kubernetes_apiserver
+    kubernetes_token:
+      from_secret: kubernetes_token
+    kubernetes_cert:
+      from_secret: kubernetes_cert
+    kubernetes_user: drone-max-deployments
+    namespace: max
+    deployment: max-heidinger
+    container: max-heidinger
+    repo: registry.glidingthrough.space/max-heidinger.de
+    tag: ci-${DRONE_BUILD_NUMBER}
+  when:
+    branch:
+      - master
+    event:
+      exclude:
+      - pull_request
