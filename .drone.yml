@@ -24,6 +24,9 @@ steps:
     branch:
     - master
     - develop
+    event:
+      exclude:
+      - pull_request
 
 - name: deploy-image
   image: quay.io/riesinger/drone-kubernetes
@@ -43,3 +46,6 @@ steps:
   when:
     branch:
       - master
+    event:
+      exclude:
+      - pull_request
