@@ -2,11 +2,31 @@ kind: pipeline
 name: default
 
 steps:
+- name: restore-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: max-heidinger-cache
+    path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
 - name: build-site
   image: node
   commands:
   - npm install
   - npm run build
+
+- name: rebuild-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: max-heidinger-cache
+    path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
 
 - name: push-registry
   image: plugins/docker
@@ -27,3 +47,8 @@ steps:
     event:
       exclude:
       - pull_request
+
+volumes:
+- name: max-heidinger-cache
+  host: 
+    path: /tmp/max-heidinger-cache
