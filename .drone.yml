@@ -13,10 +13,10 @@ steps:
       - ./node_modules
 
 - name: build-site
-  image: node
+  image: node:16-alpine
   commands:
-  - npm install
-  - npm run build
+  - yarn
+  - yarn build
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache
