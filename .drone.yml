@@ -2,31 +2,11 @@ kind: pipeline
 name: default
 
 steps:
-- name: restore-cache
-  image: drillster/drone-volume-cache
-  volumes:
-  - name: cache
-    path: /cache
-  settings:
-    restore: true
-    mount:
-      - ./node_modules
-
 - name: build-site
-  image: node:16-alpine
+  image: node:18-alpine
   commands:
   - yarn
   - yarn build
-
-- name: rebuild-cache
-  image: drillster/drone-volume-cache
-  volumes:
-  - name: cache
-    path: /cache
-  settings:
-    rebuild: true
-    mount:
-      - ./node_modules
 
 - name: push-registry
   image: plugins/docker
@@ -62,8 +42,3 @@ steps:
     event:
       exclude:
       - pull_request
-
-volumes:
-- name: cache
-  host: 
-    path: /tmp/drone-cache
