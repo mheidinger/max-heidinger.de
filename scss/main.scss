@@ -1,28 +1,57 @@
 @import "reset";
 
 $small_media: 767px;
+$medium_media: 1000px;
 $bg_backup_color: #182938;
 $border_color: #81869B;
 $profile_size: 23vw;
-$link_size: 6vw;
+$link_size: 4vw;
+$link_size_small: 6vh;
 $font: 'Montserrat', sans-serif;
 $font-color: #E1E5F0;
 
 html, body {
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
   height: 100%;
   font-family: $font;
   color: $font-color;
 }
 
-$font-sizes: (
-  h1: 700%,
-  h2: 250%,
+$font-sizes-large: (
+  h1: 6em,
+  h2: 4em,
 );
-@each $elem, $size in $font-sizes {
+@each $elem, $size in $font-sizes-large {
   #{$elem} {
     font-size: #{$size};
     margin: 10px 0;
+  }
+}
+
+$font-sizes-medium: (
+  h1: 4em,
+  h2: 2em,
+);
+@media only screen and ((max-width: $medium_media) or (max-height: $medium_media)) {
+  @each $elem, $size in $font-sizes-medium {
+    #{$elem} {
+      font-size: #{$size};
+      margin: 10px 0;
+    }
+  }
+}
+
+$font-sizes-small: (
+  h1: 3em,
+  h2: 1em,
+);
+@media only screen and ((max-width: $small_media) or (max-height: $small_media)) {
+  @each $elem, $size in $font-sizes-small {
+    #{$elem} {
+      font-size: #{$size};
+      margin: 10px 0;
+    }
   }
 }
 
@@ -51,11 +80,13 @@ body {
 #container {
   display: flex;
   flex-direction: row;
-  @media only screen and (max-width: $small_media) {
-    flex-direction: column;
-  }
   align-items: center;
   justify-content: space-around;
+  @media only screen and (max-width: $small_media) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4vh;
+  }
 
   height: 100%;
   padding: 0 5vw;
@@ -71,6 +102,10 @@ body {
 }
 
 #content {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+
   #content_text {
     text-align: center;
 
@@ -83,11 +118,13 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 100px;
+    justify-content: space-around;
 
     img {
       width: $link_size;
+      @media only screen and (max-width: $small_media) {
+        width: $link_size_small;
+      }
     }
   }
 }
