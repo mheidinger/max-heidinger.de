@@ -11,7 +11,7 @@ steps:
 - name: push-registry
   image: plugins/docker
   settings:
-    repo: registry.max-heidinger.de/max-heidinger.de
+    repo: registry-castor.max-heidinger.de/max-heidinger.de
     registry: registry.max-heidinger.de
     tags:
       - latest
