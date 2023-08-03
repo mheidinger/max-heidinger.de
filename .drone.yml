@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: build-site
-  image: node:19-alpine
+  image: node:20-alpine
   commands:
   - yarn
   - yarn build
@@ -11,8 +11,8 @@ steps:
 - name: push-registry
   image: plugins/docker
   settings:
-    repo: registry.max-heidinger.de/max-heidinger.de
-    registry: registry.max-heidinger.de
+    repo: registry-castor.max-heidinger.de/max-heidinger.de
+    registry: registry-castor.max-heidinger.de
     tags:
       - latest
       - ci-${DRONE_BUILD_NUMBER}
@@ -31,7 +31,7 @@ steps:
 - name: update-deployment
   image: plugins/webhook
   settings:
-    urls: https://portainer.max-heidinger.de/api/webhooks/3aec3046-1a5c-4981-961d-d2d79d84054d
+    urls: https://portainer-castor.max-heidinger.de/api/webhooks/ca952cf1-f7df-4f88-b9b2-f4d10083386d
     username:
       from_secret: tac_username
     password:
