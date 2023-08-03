@@ -12,7 +12,7 @@ steps:
   image: plugins/docker
   settings:
     repo: registry-castor.max-heidinger.de/max-heidinger.de
-    registry: registry.max-heidinger.de
+    registry: registry-castor.max-heidinger.de
     tags:
       - latest
       - ci-${DRONE_BUILD_NUMBER}
