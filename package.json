@@ -13,7 +13,7 @@
     "dev": "run-p sass:watch server:serve"
   },
   "devDependencies": {
-    "browser-sync": "2.29.3",
+    "browser-sync": "3.0.3",
     "npm-run-all2": "7.0.1",
     "sass": "1.81.0"
   }
