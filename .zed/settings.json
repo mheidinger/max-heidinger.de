@@ -1,0 +1,66 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+  "languages": {
+    "CSS": {
+      "formatter": {
+        "external": {
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+          "command": "./node_modules/.bin/prettier"
+        }
+      }
+    },
+    "JSON": {
+      "formatter": {
+        "external": {
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+          "command": "./node_modules/.bin/prettier"
+        }
+      }
+    },
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+          "command": "./node_modules/.bin/prettier"
+        }
+      }
+    },
+    "LESS": {
+      "formatter": {
+        "external": {
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+          "command": "./node_modules/.bin/prettier"
+        }
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "external": {
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+          "command": "./node_modules/.bin/prettier"
+        }
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+          "command": "./node_modules/.bin/prettier"
+        }
+      }
+    },
+    "YAML": {
+      "formatter": {
+        "external": {
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+          "command": "./node_modules/.bin/prettier"
+        }
+      },
+      "tab_size": 2
+    }
+  },
+  "tab_size": 4
+}

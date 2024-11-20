@@ -10,11 +10,13 @@
     "sass:watch": "sass --style=expanded scss:css --watch",
     "server:serve": "browser-sync start --server --port 3000 --files 'css/*.css' --files './*.html' --files 'js/*.js'",
     "build": "run-p sass:build",
-    "dev": "run-p sass:watch server:serve"
+    "dev": "run-p sass:watch server:serve",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "browser-sync": "2.29.3",
-    "npm-run-all": "4.1.5",
-    "sass": "1.64.2"
+    "browser-sync": "3.0.3",
+    "npm-run-all2": "7.0.1",
+    "sass": "1.81.0",
+    "prettier": "3.3.3"
   }
 }
