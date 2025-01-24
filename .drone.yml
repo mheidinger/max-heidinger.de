@@ -2,12 +2,6 @@ kind: pipeline
 name: default
 
 steps:
-  - name: build-site
-    image: node:22-alpine
-    commands:
-      - yarn
-      - yarn build
-
   - name: push-registry
     image: plugins/docker
     settings:
