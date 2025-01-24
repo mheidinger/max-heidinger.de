@@ -1,10 +1,11 @@
 .drone.yml
 .gitignore
 .git/
-.vscode/
+.zed/
 node_modules/
-deploy/
+.dockerignore
 Dockerfile
-package-lock.json
+pnpm-lock.json
 package.json
 README.md
+renovate.json
