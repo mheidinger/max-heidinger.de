@@ -10,7 +10,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "browser-sync": "3.0.3",
+    "browser-sync": "3.0.4",
     "prettier": "3.4.2"
   }
 }
