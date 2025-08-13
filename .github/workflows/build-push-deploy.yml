@@ -37,15 +37,15 @@ jobs:
             registry-lynx.max-heidinger.de/max-heidinger.de:latest
             registry-lynx.max-heidinger.de/max-heidinger.de:${{ github.sha }}
 
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   needs: push
-  #
-  #   steps:
-  #     # https://github.com/distributhor/workflow-webhook
-  #     - name: Deploy
-  #       uses: distributhor/workflow-webhook@v3
-  #       with:
-  #         webhook_type: "json-extended"
-  #         webhook_url: ${{ secrets.WEBHOOK_URL }}
-  #         webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
+  deploy:
+    runs-on: ubuntu-latest
+    needs: push
+
+    steps:
+      # https://github.com/distributhor/workflow-webhook
+      - name: Deploy
+        uses: distributhor/workflow-webhook@v3
+        with:
+          webhook_type: "json-extended"
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
